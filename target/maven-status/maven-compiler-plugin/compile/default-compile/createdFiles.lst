@@ -1,0 +1,14 @@
+com\crowdar\examples\steps\LoginSteps.class
+com\crowdar\examples\services\LoginService.class
+MobileParallelTestRunner.class
+com\crowdar\examples\steps\TimeEntrySteps.class
+com\crowdar\examples\services\TimeTrackerService.class
+com\crowdar\examples\constants\LoginConstants.class
+com\crowdar\examples\constants\TimeTrackerConstants.class
+com\crowdar\examples\constants\HomeConstants.class
+com\crowdar\examples\report\Reporter.class
+com\crowdar\examples\services\GenericService.class
+MobileSecuencialTestRunner.class
+com\crowdar\examples\services\HomeService.class
+com\crowdar\examples\report\TestManager.class
+com\crowdar\examples\steps\HomeSteps.class

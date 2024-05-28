@@ -15,23 +15,31 @@ public class TimeEntrySteps {
         TimeTrackerService.tapManualButton();
     }
 
-    @And("el usuario clickea el boton Start y setea una hora de inicio (.*)")
-    public void elUsuarioClickeaElBotonStartYSeteaUnaHoraDeInicio(String hora) {
-        TimeTrackerService.startButton(hora);
+    //DATE
+    @Given("el usuario elige una (.*)")
+    public void elUsuarioEligeUnaFecha(String fecha) {
+        TimeTrackerService.agregoFecha(fecha);
     }
 
-    @And("el usuario clickea el boton End y setea una hora final (.*)")
-    public void elUsuarioClickeaElBotonEndYSeteaUnaHoraFinal(String hora) {
-        TimeTrackerService.endButton(hora);
+    //HOURS
+    @Given("el usuario clickea el boton Start y setea una hora de (.*) con sus (.*)")
+    public void elUsuarioClickeaElBotonStartYSeteaUnaHoraDeInicioConSusMinutos(String inicio, String minutos) {
+        TimeTrackerService.startButton(inicio, minutos);
     }
 
-    @And("el usuario nombra su nuevo time entry (.*)")
-    public void elUsuarioNombraSuNuevoTimeEntry(String NuevoTest) {
-        TimeTrackerService.nameNewEntry(NuevoTest);
+    @And("el usuario clickea el boton End y setea una hora de (.*) con sus (.*)")
+    public void elUsuarioClickeaElBotonEndYSeteaUnaHoraDeCierre(String cierre, String minutos) {
+        TimeTrackerService.endButton(cierre, minutos);
     }
 
-    @And("el usuario clickea el boton Save")
-    public void elUsuarioClickeaElBotonSave() {
+    //DATOS
+    @And("el usuario nombra el time entry (.*), elige un proyecto, elige una task, le asigna un tag, marca si es (.*) y clickea el boton Save")
+    public void elUsuarioNombraElTimeEntryNombreEligeUnProyectoEligeUnaTaskLeAsignaUnTagMarcaSiEsYClickeaElBotonSave(String nombre, Boolean billiable) {
+        TimeTrackerService.nameNewEntry(nombre);
+        TimeTrackerService.addProyect();
+        TimeTrackerService.addTask();
+        TimeTrackerService.addTag();
+        TimeTrackerService.activateBilliable();
         TimeTrackerService.saveTimeEntry();
     }
 
@@ -40,7 +48,8 @@ public class TimeEntrySteps {
         TimeTrackerService.nuevoTimeEntryCreado();
     }
 
-
 }
+
+
 
 

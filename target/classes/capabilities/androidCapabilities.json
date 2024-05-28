@@ -1,0 +1,9 @@
+{
+  "appium:deviceName": "{{deviceName}}",
+  "appium:app": "{{app}}",
+  "platformName": "Android",
+  "appium:avd": "{{avd}}",
+  "appium:resetKeyboard": "true",
+  "appium:unicodeKeyboard": "true",
+  "appium:automationName": "UiAutomator2"
+}
