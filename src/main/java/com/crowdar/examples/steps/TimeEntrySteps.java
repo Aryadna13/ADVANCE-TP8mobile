@@ -48,6 +48,15 @@ public class TimeEntrySteps {
         TimeTrackerService.nuevoTimeEntryCreado();
     }
 
+    @And("el usuario nombra el time entry <nombre>, elige un proyecto, elige una task, le asigna un tag, marca si es {string} y clickea el boton Cancel")
+    public void elUsuarioNombraElTimeEntryNombreEligeUnProyectoEligeUnaTaskLeAsignaUnTagMarcaSiEsYClickeaElBotonCancel(String adfsdfrg0) {
+
+    }
+
+    @Then("no se crea un nuevo time entry")
+    public void noSeCreaUnNuevoTimeEntry() {
+    }
+
 }
 
 

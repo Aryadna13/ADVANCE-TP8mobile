@@ -12,4 +12,6 @@ public class HomeSteps extends PageSteps {
     public void seMuestraLaHomePage() {
         HomeService.menuHome();
     }
+
+
 }
