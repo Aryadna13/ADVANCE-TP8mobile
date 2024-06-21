@@ -1,8 +1,4 @@
-28/05/24 00:40:42 INFO  BasicHook:20 - ------ Starting -----logueo en la aplicacion de clockify-----
-28/05/24 00:40:42 INFO  BasicHook:20 - ------ Starting -----logueo en la aplicacion de clockify-----
-28/05/24 00:41:02 INFO  BasicHook:25 - ------ Ending -----logueo en la aplicacion de clockify-----
-28/05/24 00:41:04 INFO  BasicHook:25 - ------ Ending -----logueo en la aplicacion de clockify-----
-28/05/24 00:41:04 INFO  BasicHook:20 - ------ Starting -----El usuario crea un nuevo registro de horas trabajadas-----
-28/05/24 00:41:04 INFO  BasicHook:20 - ------ Starting -----El usuario crea un nuevo registro de horas trabajadas-----
-28/05/24 00:42:07 INFO  BasicHook:25 - ------ Ending -----El usuario crea un nuevo registro de horas trabajadas-----
-28/05/24 00:42:08 INFO  BasicHook:25 - ------ Ending -----El usuario crea un nuevo registro de horas trabajadas-----
+20/06/24 23:22:02 INFO  BasicHook:20 - ------ Starting -----Creo un nuevo registro de horas trabajadas pero modificando la fecha desde el calendario-----
+20/06/24 23:22:02 INFO  BasicHook:20 - ------ Starting -----Creo un nuevo registro de horas trabajadas pero modificando la fecha desde el calendario-----
+20/06/24 23:23:02 INFO  BasicHook:25 - ------ Ending -----Creo un nuevo registro de horas trabajadas pero modificando la fecha desde el calendario-----
+20/06/24 23:23:03 INFO  BasicHook:25 - ------ Ending -----Creo un nuevo registro de horas trabajadas pero modificando la fecha desde el calendario-----

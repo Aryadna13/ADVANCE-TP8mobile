@@ -7,7 +7,7 @@ Feature: El usuario interactua con distintas herramientas del menu lateral
     And el usuario clickea el boton de menu
 
 
-  @Settings @smoke---
+  @Settings @smoke
   Scenario: el usuario cambia el tema de la aplicacion y las notificaciones
     When el usuario clickea el boton Settings
     And el usuario clickea el boton AppTheme y cambia el tema a dark
@@ -15,8 +15,8 @@ Feature: El usuario interactua con distintas herramientas del menu lateral
     Then se cambia el tema a dark y las notificaciones aparecen desactivadas
 
 
-  @LogOutExitoso @smoke-
+  @LogOutExitoso @smoke
   Scenario: el usuario desloguea de la aplicacion de clockify
     Given el usuario clickea el boton de menu
     When el usuario clickea el boton LogOut
-    Then se muestra la Homepage sin loguear
+    Then se muestra la Home pagessdfsff

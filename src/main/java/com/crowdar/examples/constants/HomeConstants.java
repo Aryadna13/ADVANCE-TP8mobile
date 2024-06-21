@@ -10,7 +10,7 @@ public class HomeConstants {
 
     public static final String SETTINGS_BUTTON = "xpath://androidx.appcompat.widget.LinearLayoutCompat[@resource-id=\"me.clockify.android:id/settingsFragment\"]";
 
-    public static final String APP_THEME_BUTTON = "xpath://android.view.View[@resource-id=\"appThemeContainer\"]";
+    public static final String APP_THEME_BUTTON = "xpath://android.widget.TextView[@text=\"App theme\"]";
 
     public static final String DARK_THEME_BUTTON = "xpath://android.widget.TextView[@text=\"Dark\"]";
 
@@ -21,7 +21,7 @@ public class HomeConstants {
     public static final String NOTIFICATIONS_SLIDE_BUTTON = "xpath://android.view.View[@resource-id=\"notificationsContainer\"]/android.view.View";
 
 
-  //LogOut
+   //LogOut
 
     public static final String LOG_OUT_BUTTON ="xpath: //androidx.appcompat.widget.LinearLayoutCompat[@resource-id=\"me.clockify.android:id/logoutNavDrawer\"]";
 

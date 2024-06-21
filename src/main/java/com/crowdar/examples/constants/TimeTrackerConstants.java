@@ -12,6 +12,7 @@ public class TimeTrackerConstants {
     //Date
     public static final String DATE_BUTTON = "xpath: //android.widget.TextView[@resource-id=\"startDate\"]";
 
+        //Input
     public static final String EDIT_DATE_BUTTON = "xpath: //android.widget.ImageButton[@content-desc=\"Switch to text input mode\"]";
 
     public static final String DATE_INPUT_CLEAR = "xpath: //android.widget.LinearLayout[@resource-id=\"me.clockify.android:id/mtrl_picker_text_input_date\"] ";
@@ -19,6 +20,17 @@ public class TimeTrackerConstants {
     public static final String DATE_INPUT = "xpath: //android.widget.EditText[@text=\"Date, dd/MM/yyyy\"]";
 
     public static final String DATE_OK_BUTTON = "xpath: //android.widget.Button[@resource-id=\"me.clockify.android:id/confirm_button\"]";
+
+
+        //Calendar
+    public static final String YEAR_BUTTON = "xpath://android.widget.Button[@resource-id=\"me.clockify.android:id/month_navigation_fragment_toggle\"]";
+
+    public static final String YEAR_2025 = "xpath://android.widget.TextView[@content-desc=\"Navigate to year 2025\"]";
+
+    public static final String MONT_BUTTON_NEXT = "xpath://android.widget.Button[@content-desc=\"Change to next month\"]";
+
+    public static final String DAY_SEPTEMBER_13 = "xpath://android.widget.TextView[@content-desc=\"Saturday, September 13, 2025\"]";
+
 
     //Hour
     public static final String START_BUTTON = "xpath: //android.widget.TextView[@text=\"Start\"]";

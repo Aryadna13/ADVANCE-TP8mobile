@@ -21,11 +21,22 @@ public class TimeTrackerService {
     }
 
     //DATE
-    public static void agregoFecha(String fecha) {
+    public static void agregoFechaInput(String fecha) {
         MobileActionManager.click(TimeTrackerConstants.DATE_BUTTON);
         MobileActionManager.click(TimeTrackerConstants.EDIT_DATE_BUTTON);
-        GenericService.deleteText(TimeTrackerConstants.DATE_INPUT_CLEAR,10);
+        GenericService.deleteText(TimeTrackerConstants.DATE_INPUT_CLEAR, 10);
         MobileActionManager.setInput(TimeTrackerConstants.DATE_INPUT, fecha);
+        MobileActionManager.click(TimeTrackerConstants.DATE_OK_BUTTON);
+    }
+
+    public static void agregoFechaCalendario() {
+        MobileActionManager.click(TimeTrackerConstants.DATE_BUTTON);
+        MobileActionManager.click(TimeTrackerConstants.YEAR_BUTTON);
+        MobileActionManager.click(TimeTrackerConstants.YEAR_2025);
+        MobileActionManager.click(TimeTrackerConstants.MONT_BUTTON_NEXT);
+        MobileActionManager.click(TimeTrackerConstants.MONT_BUTTON_NEXT);
+        MobileActionManager.click(TimeTrackerConstants.MONT_BUTTON_NEXT);
+        MobileActionManager.click(TimeTrackerConstants.DAY_SEPTEMBER_13);
         MobileActionManager.click(TimeTrackerConstants.DATE_OK_BUTTON);
     }
 
@@ -34,9 +45,9 @@ public class TimeTrackerService {
         MobileActionManager.click(TimeTrackerConstants.START_BUTTON);
         MobileActionManager.click(TimeTrackerConstants.TECLADO_EN_PANTALLA);
         MobileActionManager.click(HORA_INPUT_CLEAR);
-        MobileActionManager.setInput(TIME_INPUT,inicio);
+        MobileActionManager.setInput(TIME_INPUT, inicio);
         MobileActionManager.click(MINUTOS_INPUT_CLEAR);
-        MobileActionManager.setInput(TIME_INPUT,minutos);
+        MobileActionManager.setInput(TIME_INPUT, minutos);
         MobileActionManager.click(TimeTrackerConstants.OK_BUTTON);
     }
 
@@ -44,9 +55,9 @@ public class TimeTrackerService {
         MobileActionManager.click(TimeTrackerConstants.END_BUTTON);
         MobileActionManager.click(TimeTrackerConstants.TECLADO_EN_PANTALLA);
         MobileActionManager.click(HORA_INPUT_CLEAR);
-        MobileActionManager.setInput(TIME_INPUT,cierre);
+        MobileActionManager.setInput(TIME_INPUT, cierre);
         MobileActionManager.click(MINUTOS_INPUT_CLEAR);
-        MobileActionManager.setInput(TIME_INPUT,minutos);
+        MobileActionManager.setInput(TIME_INPUT, minutos);
         MobileActionManager.click(TimeTrackerConstants.OK_BUTTON);
     }
 
@@ -75,16 +86,25 @@ public class TimeTrackerService {
     }
 
     public static void activateBilliable() {
-        //MobileActionManager.click(TimeTrackerConstants.BILLIABLE_BUTTON);
-        MobileActionManager.setCheckbox(TimeTrackerConstants.BILLIABLE_BUTTON,true);
+        MobileActionManager.setCheckbox(TimeTrackerConstants.BILLIABLE_BUTTON, true);
     }
 
     public static void saveTimeEntry() {
         MobileActionManager.click(TimeTrackerConstants.SAVE_BUTTON);
     }
 
+    public static void cancelTimeEntry() {
+        MobileActionManager.click(DISCARD_BUTTON);
+        MobileActionManager.click(DISCARD_OK_BUTTON);
+    }
+
     public static void nuevoTimeEntryCreado() {
         MobileActionManager.waitVisibility(TimeTrackerConstants.ENTRY_CREATED_MESSAGE);
         Assert.assertTrue(MobileActionManager.isVisible(TimeTrackerConstants.ENTRY_CREATED_MESSAGE), HomeConstants.VIEW_NOT_DISPLAYED_MESSAGE);
+    }
+
+    public static void nuevoTimeEntryCancelado() {
+        MobileActionManager.waitVisibility(DATE_BUTTON);
+        Assert.assertEquals(MobileActionManager.getElement(DATE_BUTTON),DATE_BUTTON);
     }
 }

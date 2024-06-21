@@ -18,8 +18,14 @@ public class TimeEntrySteps {
     //DATE
     @Given("el usuario elige una (.*)")
     public void elUsuarioEligeUnaFecha(String fecha) {
-        TimeTrackerService.agregoFecha(fecha);
+        TimeTrackerService.agregoFechaInput(fecha);
     }
+
+    @Given("el usuario elige desde el calendario una (.*)")
+    public void elUsuarioEligeDesdeElCalendarioUnaFecha(String fecha) {
+        TimeTrackerService.agregoFechaCalendario();
+    }
+
 
     //HOURS
     @Given("el usuario clickea el boton Start y setea una hora de (.*) con sus (.*)")
@@ -48,14 +54,21 @@ public class TimeEntrySteps {
         TimeTrackerService.nuevoTimeEntryCreado();
     }
 
-    @And("el usuario nombra el time entry <nombre>, elige un proyecto, elige una task, le asigna un tag, marca si es {string} y clickea el boton Cancel")
-    public void elUsuarioNombraElTimeEntryNombreEligeUnProyectoEligeUnaTaskLeAsignaUnTagMarcaSiEsYClickeaElBotonCancel(String adfsdfrg0) {
-
+    @And("el usuario nombra el time entry (.*), elige un proyecto, elige una task, le asigna un tag, marca si es (.*) y clickea el boton Cancel")
+    public void elUsuarioNombraElTimeEntryNombreEligeUnProyectoEligeUnaTaskLeAsignaUnTagMarcaSiEsYClickeaElBotonCancel(String nombre, Boolean billiable) {
+        TimeTrackerService.nameNewEntry(nombre);
+        TimeTrackerService.addProyect();
+        TimeTrackerService.addTask();
+        TimeTrackerService.addTag();
+        TimeTrackerService.activateBilliable();
+        TimeTrackerService.cancelTimeEntry();
     }
 
     @Then("no se crea un nuevo time entry")
-    public void noSeCreaUnNuevoTimeEntry() {
+    public static void noSeCreaUnNuevoTimeEntry() {
+        TimeTrackerService.nuevoTimeEntryCancelado();
     }
+
 
 }
 
